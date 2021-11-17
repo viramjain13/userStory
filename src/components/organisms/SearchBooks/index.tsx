@@ -1,9 +1,13 @@
-import React from 'react'
+import { Grid } from "@material-ui/core";
+import { BookCard } from "../../molecules/BookCard";
 
-export const SearchBooks = () => {
+export default function SearchBooks() {
+  
+   
+  
     return (
-        <div>
-            
-        </div>
-    )
-}
+      <div>
+       
+      </div>
+    );
+  }

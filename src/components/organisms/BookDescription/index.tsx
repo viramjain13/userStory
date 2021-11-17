@@ -1,25 +1,37 @@
 import { Grid, IconButton, Typography } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BookThumbNail from "../../atoms/BookThumbNail";
 import ButtonComponent from "../../atoms/Button";
-import { TabComponent } from "../Tab";
+import BookDetail, { BookDetailProp } from "../../molecules/BookDetail";
+import { TabComponent, TabData } from "../Tab";
 
-export const BookDescription = () => {
-    
+const BookDescription: React.FC = () => {
+  const [bookDetail, setBookDetail] = useState<BookDetailProp>();
+  const [tabDetails, setTabDetail] = useState<TabData[]>([]);
+
+  useEffect(() => {
+    setBookDetail({});
+    setTabDetail([]);
+  }, []);
   return (
     <Grid container>
       <Grid item>
-        <BookDescription />
+        <BookDetail
+          name={bookDetail.name}
+          description={bookDetail.description}
+          time={bookDetail.time}
+          audio={bookDetail.audio}
+        />
         <ButtonComponent title={""} />
         <ButtonComponent title={""} />
         <Typography></Typography>
         <IconButton />
-        <TabComponent />
+        <TabComponent tabData={tabDetails} />
       </Grid>
       <Grid item>
         <BookThumbNail image={""} />
       </Grid>
-
     </Grid>
   );
 };
+export default BookDescription;

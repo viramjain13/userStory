@@ -5,8 +5,9 @@ export type BookProp = {
   name: string;
   author: string;
   img: string;
+  id:number;
 };
-export const BookCard = (prop: BookProp) => {
+ const BookCard = (prop: BookProp) => {
   const { name, author, img } = prop;
   return (
     <Card>
@@ -16,3 +17,4 @@ export const BookCard = (prop: BookProp) => {
     </Card>
   );
 };
+export default BookCard;

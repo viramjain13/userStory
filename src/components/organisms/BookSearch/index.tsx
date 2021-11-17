@@ -1,17 +1,24 @@
 import { List } from '@material-ui/core'
-import React from 'react'
+import React,{ useState,useEffect} from 'react'
 import HomeSearch from '../../molecules/Search'
 
-export const index = () => {
+ const Search:React.FC = () => {
+    const [searchTerm,setSearchTerm]=useState("");
 
-    let search =   <List>
+useEffect(() => {
+
+},[])
+let searchResult=   <List>
     {/* list of search results */ }
 </List>
+
     return (
         <div>
             <HomeSearch/>
 
-          {search}
+          {searchResult}
         </div>
     )
 }
+
+export default Search;

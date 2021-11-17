@@ -1,17 +1,13 @@
 import { Icon } from '@material-ui/core'
 import React from 'react'
 
-export type IconProp={
-    image:string
-    styles?:Object
-}
-function index(props:IconProp) {
-    const { image, styles } = props
+
+function index( ){
+    
     return (
-        <Icon   >
-            <img src={image} alt=""/>
-        </Icon>
+      <div>
+      </div>
     )
 }
 
-export default index
+export default index;
